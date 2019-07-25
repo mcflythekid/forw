@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "npm i",
+    "stop": "",
+    "launch": "pm2 start src/app.js",
+    "restart": "envigenter default && npm run stop && npm run launch",
+    "start": "npm run setup && npm run restart"
   },
   "author": "",
   "license": "ISC",
