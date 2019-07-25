@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "setup": "npm i",
-    "stop": "",
-    "launch": "pm2 start src/app.js",
+    "stop": "pm2 stop forw_01",
+    "launch": "pm2 start src/app.js --name forw_01",
     "restart": "envigenter default && npm run stop && npm run launch",
     "start": "npm run setup && npm run restart"
   },
@@ -18,6 +18,7 @@
     "smtp-server": "^3.5.0"
   },
   "devDependencies": {
+    "hygen": "^4.0.7",
     "envigenter": "1.0.6",
     "hygen-envigenter": "^1.1.0"
   }
