@@ -1,0 +1,11 @@
+smtp:
+  host: 'str'
+  port: 0
+  username: 'str'
+  password: 'str'
+alert:
+  forwards: 'str,str'
+  hotword: 'str'
+  sender: 'str'
+  from: 'str'
+  to: 'str'
