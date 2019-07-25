@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "setup": "npm i",
-    "stop": "pm2 stop forw_01",
+    "stop": "pm2 stop forw_01 || true",
     "launch": "pm2 start src/app.js --name forw_01",
     "restart": "envigenter default && npm run stop && npm run launch",
     "start": "npm run setup && npm run restart"
