@@ -20,7 +20,7 @@ cp -f $FILE ./env/$ENV.env.yml
 
 ### Start
 npm ci
-#npm run start
+npm run start
 
 # Make directory writable by group
 chmod -R g+w .
