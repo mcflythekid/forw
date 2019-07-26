@@ -18,6 +18,9 @@ fi
 echo "Using file: $FILE"
 cp -f $FILE ./env/$ENV.env.yml
 
+# Make directory writable by group
+chmod -R g+w .
+
 ### Start
 npm ci
 #npm run start
