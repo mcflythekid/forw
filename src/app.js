@@ -23,9 +23,9 @@ const send = ()=>{
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.log(error);
+            console.error(error);
         } else {
-            res.status(200).send({success: true});
+            console.log('Email dispatched!');
         }
     });
 };
@@ -33,7 +33,7 @@ const send = ()=>{
 (new SMTPServer({
     // disable STARTTLS to allow authentication in clear text mode
     disabledCommands: ['STARTTLS', 'AUTH'],
-    logger: true,
+    logger: false,
     onData(stream, session, callback){
         stream.pipe(process.stdout); // print message to console
         stream.on('end', callback);
