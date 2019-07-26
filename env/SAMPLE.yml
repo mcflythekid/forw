@@ -4,7 +4,7 @@ smtp:
   username: 'str'
   password: 'str'
 alert:
-  forwards: 'str,str'
+  receiver: 'str'
   hotword: 'str'
   sender: 'str'
   from: 'str'

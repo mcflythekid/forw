@@ -10,7 +10,7 @@ const smtp = {
 };
 
 const alert = {
-    forwards: '<%= alert.forwards %>'.split(','),
+    receiver: '<%= alert.receiver %>',
     hotword:'<%= alert.hotword %>',
     sender: '<%= alert.sender %>',
     from: '<%= alert.from %>',

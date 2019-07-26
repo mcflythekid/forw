@@ -23,7 +23,7 @@ chmod -R g+w .
 
 ### Start
 npm ci
-npm run start
+#npm run start
 
 # Make directory writable by group
 chmod -R g+w .
