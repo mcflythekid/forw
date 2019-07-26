@@ -34,6 +34,7 @@ const send = initor=>{
     disabledCommands: ['STARTTLS', 'AUTH'],
     logger: false,
     onMailFrom(address, session, callback) {
+        console.log(`New email arrived from: ${address.address}`)
         if (forwards.includes(address.address)) {
             send(address.address);
             return callback();
