@@ -15,9 +15,9 @@ const send = initor=>{
     };
     
     const transporter = nodeMailer.createTransport({ 
-        // host, 
-        // port,
-        // secure: false,  //true for 465 port, false for other ports
+        sendmail: true,
+        newline: 'unix',
+        path: '/usr/sbin/sendmail'
     });
 
     transporter.sendMail(mailOptions, (error, info) => {
