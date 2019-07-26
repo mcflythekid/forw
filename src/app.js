@@ -6,7 +6,7 @@ const { host, port, username, password } = require('./config').smtp;
 const { receiver, hotword, sender, from, to } = require('./config').alert;
 
 const send = ()=>{
-    const content = `${moment.format()}`;
+    const content = `${moment().format()}`;
     const mailOptions = {
         from: `"${sender}" <${from}>`,
         to, // list of receivers
