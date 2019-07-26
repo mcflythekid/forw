@@ -1,6 +1,6 @@
 const { SMTPServer } = require('smtp-server');
 const nodeMailer = require('nodemailer');
-const moment = require('moment');
+const moment = require('moment-timezone');
 
 const { host, port, username, password } = require('./config').smtp;
 const { receiver, hotword, sender, from, to } = require('./config').alert;
