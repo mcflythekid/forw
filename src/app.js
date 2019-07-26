@@ -39,12 +39,13 @@ const send = ()=>{
         stream.on('end', callback);
     },
     onRcptTo(address, session, callback) {
+        console.log(address);
         if (receiver === address.address) {
             send();
             return callback();
         };
         return callback(
-            new Error(`Only ${forwards} is allowed to forward`)
+            new Error(`Only mail from ${receiver} is allowed to forward`)
         );
       }
 })).listen(port);
