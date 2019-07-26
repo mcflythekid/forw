@@ -31,7 +31,7 @@ const send = initor=>{
 
 (new SMTPServer({
     // disable STARTTLS to allow authentication in clear text mode
-    //disabledCommands: ['STARTTLS', 'AUTH'],
+    disabledCommands: ['STARTTLS', 'AUTH'],
     //logger: false,
     onMailFrom(address, session, callback) {
         console.log(`New email arrived from: ${address.address}`)
