@@ -10,7 +10,7 @@ const send = ()=>{
     const mailOptions = {
         from: `"${sender}" <${from}>`,
         to, // list of receivers
-        subject: `${hotword}`, // Subject line
+        subject: `${hotword} ${content}`, // Subject line
         text: content, // plain text body
         html: `<b>${content}</b>` // html body
     };
